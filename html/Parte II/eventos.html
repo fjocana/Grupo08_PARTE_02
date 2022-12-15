@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Videograph Template">
+    <meta name="keywords" content="Videograph, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="img/icono.ico">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body onload="checkCookies()">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header" style="background-color: rgba(0, 0, 0, 0.849); position: fixed;">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo hero__text">
+                        <a href="index.html"><img src="img/logo.png" width="150px"> </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option" id="ini">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Inicio</a></li>
+                            </ul>
+                        </nav>
+                       
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Begin -->
+    <section class="blog-hero spad set-bg" data-setbg="https://desarrolloweb.com/media/272/eventos-en-javascript.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__hero__text" style="text-shadow: 10px 10px 5px gray;">
+                        <h2 style="color: black;">Eventos DOM</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <div class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__recent" id="1">
+                            <h4>Reaccionar a los eventos</h4>
+                            <p>Un JavaScript se puede ejecutar cuando ocurre un evento, como cuando un usuario hace clic en un elemento HTML. <br>
+
+                                Para ejecutar código cuando un usuario hace clic en un elemento, agregue código JavaScript a un atributo de evento HTML: <br>
+                                onclick=<code> JavaScript</code><br>
+                                Ejemplos de eventos HTML:<br>
+
+                                -Cuando un usuario hace clic con el mouse<br>
+                                -Cuando una página web ha cargado<br>
+                                -Cuando se ha cargado una imagen<br>
+                                -Cuando el mouse se mueve sobre un elemento<br>
+                                -Cuando se cambia un campo de entrada<br>
+                                -Cuando se envía un formulario HTML<br>
+                                -Cuando un usuario pulsa una tecla<br>
+                                En este ejemplo, el contenido del &lth1&gt elemento cambia cuando un usuario hace clic en él:
+                            </p>
+
+                        </div>
+
+                        <div class="blog__details__quote">
+                             <code>
+                                 &lt!DOCTYPE html&gt
+                                 <br>
+                                    &lthtml&gt
+                                    <br>
+                                    &ltbody&gt
+                                    <br>
+                                    &lth1 onclick="this.innerHTML='Ooops!'" &gtClick en el texto&lt/h1&gt
+                                    
+                                    <br>
+                                    &lt/body&gt
+                                    <br>
+                                    &lt/html&gt
+                             </code>   
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución</h4>
+                            <br>
+                            <h5 onclick="this.innerHTML = 'Ooops!'" style="color: white;">Click en este texto!</h5>
+
+
+                        </div>
+
+
+                        <div class="blog__details__recent" id="1">
+                            <h4>Atributos de eventos HTML</h4>
+                            <p>Para asignar eventos a elementos HTML, puede usar atributo de eventos<br></p>
+
+                        </div>
+
+                        <div class="blog__details__quote">
+                             <code>
+                                &ltbutton onclick="displayDate()"&gtIntentalo&lt/button&gt
+                             </code>   
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución</h4>
+                            <br>
+                            <button onclick="displayDate()">Intentalo</button>
+                            <div id="demo" style="color: white;"></div>
+                            <script>
+                                function displayDate() {
+                                  document.getElementById("demo").innerHTML = Date();
+                                }
+                                </script>
+
+                        </div>
+
+
+
+                        <div class="blog__details__recent" id="1">
+                            <h4>Asignar eventos utilizando el HTML DOM</h4>
+                            <p>El HTML DOM le permite asignar eventos a elementos HTML usando JavaScript:<br></p>
+
+                        </div>
+
+                        <div class="blog__details__quote">
+                             <code>
+                                document.getElementById("myBtn").onclick = displayDate;
+                             </code>   
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución</h4>
+                            <br>
+                            <button id="myBtn">Intentalo</button>
+
+                            <p id="demo1" style="color: white;"></p>
+
+                            <script>
+                            document.getElementById("myBtn").onclick = displayDate1;
+
+                            function displayDate1() {
+                            document.getElementById("demo1").innerHTML = Date();
+                            }
+                            </script>
+
+                        </div>
+
+
+                        <div class="blog__details__recent" id="1">
+                            <h4>Los eventos onload y onunload</h4>
+                            <p>Los eventos onloady onunloadse activan cuando el usuario entra o sale de la página. <br>
+
+                                El onloadevento se puede utilizar para comprobar el tipo de navegador y la versión del navegador del visitante, y cargar la versión adecuada de la página web en función de la información.<br>
+                                
+                                Los eventos onloady onunloadse pueden utilizar para tratar con las cookies.</p>
+
+                        </div>
+
+                        <div class="blog__details__quote">
+                             <code>
+                                &ltbody onload="checkCookies()"&gt <br>
+                                function checkCookies() {<br>
+                                    var text = "";<br>
+                                    if (navigator.cookieEnabled == true) {<br>
+                                      text = "Cookies are enabled.";<br>
+                                    } else {<br>
+                                      text = "Cookies are not enabled.";<br>
+                                    }<br>
+                                    document.getElementById("demo").innerHTML = text;<br>
+                                  }
+                             </code>   
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución</h4>
+                            <br>
+                            <p id="demo2"></p>
+
+                            <script>
+                            function checkCookies() {
+                            var text = "";
+                            if (navigator.cookieEnabled == true) {
+                                text = "Cookies are enabled.";
+                            } else {
+                                text = "Cookies are not enabled.";
+                            }
+                            document.getElementById("demo2").innerHTML = text;
+                            }
+                            </script>
+
+                        </div>
+
+
+                        
+                        <div class="blog__details__recent" id="1">
+                            <h4>El evento onchange</h4>
+                            <p>El onchangeevento se usa a menudo en combinación con la validación de campos de entrada. <br>
+
+                                A continuación se muestra un ejemplo de cómo utilizar onchange. La upperCase() función se llamará cuando un usuario cambie el contenido de un campo de entrada.</p>
+
+                        </div>
+
+                        <div class="blog__details__quote">
+                             <code>
+                                &ltinput type="text" id="fname" onchange="upperCase()"&gt <br>
+                                </code>
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución</h4>
+                            <br>
+                            
+                            Ingresa tu nombre: <input type="text" id="fname" onchange="upperCase()">
+                            
+
+                            <script>
+                            function upperCase() {
+                            const x = document.getElementById("fname");
+                            x.value = x.value.toUpperCase();
+                            }
+                            </script>
+
+                        </div>
+
+                        <div class="blog__details__recent" id="1">
+                            <h4>Los eventos onmouseover y onmouseout</h4>
+                            <p>Los eventos onmouseovery onmouseoutse pueden usar para activar una función cuando el usuario pasa el mouse sobre o fuera de un elemento HTML:</p>
+
+                        </div>
+
+                        <div class="blog__details__quote">
+                             <code>
+                                function mOver(obj) { <br>
+                                    obj.innerHTML = "Thank You"<br>
+                                  }<br>
+                                  
+                                  function mOut(obj) {<br>
+                                    obj.innerHTML = "Mouse Over Me"<br>
+                                  }
+                                </code>
+
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución</h4>
+                            <br>
+                            
+                            <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:160px;height:20px;padding:20px;color: white;">
+                            Mouse Over Me</div>
+
+                            <script>
+                            function mOver(obj) {
+                            obj.innerHTML = "Thank You"
+                            }
+
+                            function mOut(obj) {
+                            obj.innerHTML = "Mouse Over Me"
+                            }
+                            </script>
+
+                        </div>
+
+
+                        <div class="blog__details__recent" id="1">
+                            <h4>Los eventos onmousedown, onmouseup y onclick</h4>
+                            <p>Los eventos onmousedown, onmouseupy onclickson todos partes de un clic del mouse. Primero, cuando se hace clic en un botón del mouse, se activa el evento onmousedown, luego, cuando se suelta el botón del mouse, se activa el evento onmouseup, finalmente, cuando se completa el clic del mouse, se activa el evento onclick.</p>
+
+                        </div>
+
+                        <div class="blog__details__quote">
+                             <code>
+                                function mDown(obj) { <br>
+                                    obj.style.backgroundColor = "#1ec5e5";<br>
+                                    obj.innerHTML = "Release Me";<br>
+                                  }<br>
+                                  
+                                  function mUp(obj) {<br>
+                                    obj.style.backgroundColor="#D94A38";<br>
+                                    obj.innerHTML="Thank You";<br>
+                                  }</code>
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución</h4>
+                            <br>
+                            
+                            <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+                            style="background-color:#D94A38;width:160px;height:20px;padding:40px;color: white;">
+                            Click Me</div>
+                            
+                            <script>
+                            function mDown(obj) {
+                              obj.style.backgroundColor = "#1ec5e5";
+                              obj.innerHTML = "Release Me";
+                            }
+                            
+                            function mUp(obj) {
+                              obj.style.backgroundColor="#D94A38";
+                              obj.innerHTML="Thank You";
+                            }
+                            </script>
+
+                        </div>
+                        
+                        <div class="blog__details__recent" id="1">
+                            <h4>Más ejemplos</h4>
+                            <p>
+                                onmousedown y onmouseup <br>
+                                Cambiar una imagen cuando un usuario mantiene presionado el botón del mouse.<br><br>
+
+                                onload<br>
+                                Muestra un cuadro de alerta cuando la página ha terminado de cargarse.<br><br>
+
+                                onfocus<br>
+                                Cambia el color de fondo de un campo de entrada cuando recibe el foco.<br><br>
+
+                                Mouse Events<br>
+                                Cambia el color de un elemento cuando el cursor se mueve sobre él.<br><br>
+                            </p>
+
+                        </div>
+
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#ini" class="btn btn-primary p-3 back-to-top " style="position: fixed; left: 93%; top:90% "><i class="fa fa-angle-double-up"></i></a>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+     <footer class="footer" id="integrantes">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#">DOM AVANZADO</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option" style="text-align: center;">
+                <center><h3 style="color: white;">INTEGRANTES</h3></center>
+            </div>
+                
+                <center><div class="col-sm-12">
+                  <span class="glyphicon glyphicon-off logo-small"></span>
+                  <img src="img/usuario1.jpeg" style="width: 200px"/>
+                  <h4 style="color:white;">FRANCISCO OCAÑA</h4>
+                  <p>Telefono: 0969080080</p>
+                  <p>Email: fjocana@espe.edu.ec</p>
+                  
+                </div>
+                
+                <div class="col-sm-12">
+                  <span class="glyphicon glyphicon-wrench logo-small"></span>
+                  <img src="img/usuario2.jpeg" style="width: 200px"/>
+                  <h4 style="color:white;">EUNICE COYAGO</h4>
+                  <p>Telefono: 0993567171</p>
+                  <p>Email: epcoyago@espe.edu.ec</p>
+                </div></center>
+            
+                <div class="container" style="text-align: center; color: white;">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Grupo 8</span></strong>. All Rights Reserved
+                    </div>
+                     <div class="credits">
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+        </div>
+    
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

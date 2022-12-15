@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Videograph Template">
+    <meta name="keywords" content="Videograph, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NAVEGACION DOM</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header" style="background-color: rgba(0, 0, 0, 0.849);">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-2">
+                   <div class="header__logo hero__text">
+                        <a href="index.html"><img src="img/logo.png" width="150px"> </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option" id="ini">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Inicio</a></li>
+                            </ul>
+                        </nav>
+                       
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Begin -->
+    <section class="blog-hero spad set-bg" data-setbg="https://blog.dyma.fr/content/images/size/w750/2021/09/javascript1200x628.png">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__hero__text" style="text-shadow: 10px 10px 5px darkblue;">
+                        <h2>JavaScript HTML DOM Navegación</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Seccion para concepto -->
+
+     <section class="about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                     <div class="about__pic__item set-bg" data-setbg="img/navegacion/arbol.gif"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <span>Nodos DOM</span>
+                            
+                        </div>
+                        <div class="about__text__desc">
+                            <h4 style="color: white;">De acuerdo con el estándar W3C HTML DOM, todo en un documento HTML es un nodo:</h4>
+                            <br>
+                            <p>Todo el documento es un nodo de documento.
+                                <br>
+                                Cada elemento HTML es un nodo de elemento
+                                <br>
+                                El texto dentro de los elementos HTML son nodos de texto.
+                                <br>
+                                Cada atributo HTML es un nodo de atributo (obsoleto)
+                                <br>
+                                Todos los comentarios son nodos de comentarios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                     <div class="about__pic__item2 set-bg" data-setbg="img/navegacion/relacion.gif"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <span>Relaciones de nodo</span>
+                            
+                        </div>
+                        <div class="about__text__desc">
+                            <h4 style="color: white;">Los nodos del árbol de nodos tienen una relación jerárquica entre sí.</h4>
+                            <br>
+                            <p>Los términos padre, hijo y hermano se utilizan para describir las relaciones.
+                                <br>
+                                En un árbol de nodos, el nodo superior se llama raíz (o nodo raíz)
+                                <br>
+                                Cada nodo tiene exactamente un padre, excepto la raíz (que no tiene padre)
+                                <br>
+                                Un nodo puede tener varios hijos.
+                                <br>
+                                Los hermanos (hermanos o hermanas) son nodos con el mismo padre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion para concepto End -->
+
+
+
+    <!-- Blog Details Section Begin -->
+    <div class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__recent" id="1">
+                            <h4>Nodos secundarios y valores de nodo</h4>
+                            <p>Un error común en el procesamiento de DOM es esperar que un nodo de elemento contenga texto.
+                                <br>
+                                EJEMPLO: <code>&lttitle id="demo"&gtDOM Tutorial&lt/title&gt</code>
+                                <br>
+                                El nodo del elemento &lttitle&gt en el ejemplo anterior no contiene texto.
+                                <br>
+                                Contiene un nodo de texto con el valor "Tutorial DOM".
+                                <br>
+                                Se puede acceder al valor del nodo de texto mediante la propiedad innerHTML del nodo:
+                                <br>
+                                <code>myTitle = document.getElementById("demo").innerHTML;</code>
+                                <br>
+                                Acceder a la propiedad innerHTML es lo mismo que acceder a la nodeValue del primer hijo:
+                                <br>
+                                <code>myTitle = document.getElementById("demo").firstChild.nodeValue;</code>
+                                <br>
+                                El acceso al primer hijo también se puede hacer así:
+                                <br>
+                                <code>myTitle = document.getElementById("demo").childNodes[0].nodeValue;</code>
+                                <br><br>
+                                EJEMPLOS CON LOS TRES CÓDIGOS
+                            </p>
+                        </div>
+                        <div class="blog__details__quote">
+                            <h4 style="color:white;">InnerHTML</h4>
+                             <code>
+                                 &lt!DOCTYPE html&gt
+                                 <br>
+                                    &lthtml&gt
+                                    <br>
+                                    &ltbody&gt
+                                    <br>
+                                    &lth5 id="id01"&gtEJEMPLO NODOS SECUNDARIOS Y VALORES DE NODOS&lt/h5&gt
+                                    <br>
+                                    &ltp id="id02"&gt&lt/p&gt
+                                    <br>
+                                    &ltscript&gt
+                                    <br>
+                                    document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+                                    <br>
+                                    &lt/script&gt
+                                    <br>
+                                    &lt/body&gt
+                                    <br>
+                                    &lt/html&gt
+                             </code> 
+                             <br><br>
+                             <h4 style="color:white;">nodeValue</h4>
+                             <code>
+                                 &lt!DOCTYPE html&gt
+                                 <br>
+                                    &lthtml&gt
+                                    <br>
+                                    &ltbody&gt
+                                    <br>
+                                    &lth5 id="id01"&gtEJEMPLO NODOS SECUNDARIOS Y VALORES DE NODOS&lt/h5&gt
+                                    <br>
+                                    &ltp id="id02"&gt&lt/p&gt
+                                    <br>
+                                    &ltscript&gt
+                                    <br>
+                                    document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
+                                    <br>
+                                    &lt/script&gt
+                                    <br>
+                                    &lt/body&gt
+                                    <br>
+                                    &lt/html&gt
+                             </code>   
+                             <br><br>
+                             <h4 style="color:white;">childNodes</h4>
+                             <code>
+                                 &lt!DOCTYPE html&gt
+                                 <br>
+                                    &lthtml&gt
+                                    <br>
+                                    &ltbody&gt
+                                    <br>
+                                    &lth5 id="id01"&gtEJEMPLO NODOS SECUNDARIOS Y VALORES DE NODOS&lt/h5&gt
+                                    <br>
+                                    &ltp id="id02"&gt&lt/p&gt
+                                    <br>
+                                    &ltscript&gt
+                                    <br>
+                                   document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+                                    <br>
+                                    &lt/script&gt
+                                    <br>
+                                    &lt/body&gt
+                                    <br>
+                                    &lt/html&gt
+                             </code>   
+
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución de los 3 Ejemplos</h4>
+                            <br>
+                            <h5 style="color:white;" id="id01">EJEMPLO NODOS SECUNDARIOS Y VALORES DE NODOS</h5>
+                            <p id="id02"></p>
+
+                            <script>
+                            document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+                            </script>
+
+                        </div>
+
+                        
+                        <div class="blog__details__recent" id="2">
+                            <h4>Nodos raíz DOM</h4>
+                            <p>Hay dos propiedades especiales que permiten el acceso al documento completo:
+                                <br>
+                                document.body- El cuerpo del documento.
+                                <br>
+                               document.documentElement- El documento completo
+                           </p>
+                        </div>
+                        <div class="blog__details__quote">
+                           <h4 style="color:white;">document.body</h4>
+                             <code>
+                                 &lt!DOCTYPE html&gt
+                                 <br>
+                                    &lthtml&gt
+                                    <br>
+                                    &ltbody&gt
+                                    <br>
+                                    &lth5&gtJavaScript HTML DOM&lt/h5&gt
+                                    &ltp&gtMostrando document.body&lt/p&gt
+
+                                    &ltp id="demo"&gt&lt/p&gt
+                                    <br>
+                                    &ltscript&gt
+                                    <br>
+                                    document.getElementById("demo").innerHTML = document.body.innerHTML;
+                                    <br>
+                                    &lt/script&gt
+                                    <br>
+                                    &lt/body&gt
+                                    <br>
+                                    &lt/html&gt
+                             </code>  
+                             <br><br>
+                             <h4 style="color:white;">document.documentElement</h4>
+                             <code>
+                                 &lt!DOCTYPE html&gt
+                                 <br>
+                                    &lthtml&gt
+                                    <br>
+                                    &ltbody&gt
+                                    <br>
+                                    &lth5&gtJavaScript HTML DOM&lt/h5&gt
+                                    &ltp&gtMostrando document.docuemntElement&lt/p&gt
+
+                                    &ltp id="demo"&gt&lt/p&gt
+                                    <br>
+                                    &ltscript&gt
+                                    <br>
+                                    document.getElementById("demo").innerHTML = document.documentElement.innerHTML;
+                                    <br>
+                                    &lt/script&gt
+                                    <br>
+                                    &lt/body&gt
+                                    <br>
+                                    &lt/html&gt
+                             </code>  
+
+                            <i class="fa fa-quote-right"></i>
+                        </div>
+
+                        <div class="blog__details__quote">
+                            <h4 style="color: white;">Ejecución document.body</h4>
+                            <br>
+                            <center><img src="img/navegacion/ejemplo1.png" alt=""></center>
+                            <br><br>
+
+                            <h4 style="color: white;">Ejecución document.documentElement</h4>
+                            <br>
+                            <center><img src="img/navegacion/ejemplo2.png" alt=""></center>
+                        </div>
+
+                    
+
+
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <a href="#ini" class="btn btn-primary p-3 back-to-top " style="position: fixed; left: 93%; top:90% "><i class="fa fa-angle-double-up"></i></a>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+     <footer class="footer" id="integrantes">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#">DOM AVANZADO</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option" style="text-align: center;">
+                <center><h3 style="color: white;">INTEGRANTES</h3></center>
+            </div>
+                
+                <center><div class="col-sm-12">
+                  <span class="glyphicon glyphicon-off logo-small"></span>
+                  <img src="img/usuario1.jpeg" style="width: 200px"/>
+                  <h4 style="color:white;">FRANCISCO OCAÑA</h4>
+                  <p>Telefono: 0969080080</p>
+                  <p>Email: fjocana@espe.edu.ec</p>
+                  
+                </div>
+                
+                <div class="col-sm-12">
+                  <span class="glyphicon glyphicon-wrench logo-small"></span>
+                  <img src="img/usuario2.jpeg" style="width: 200px"/>
+                  <h4 style="color:white;">EUNICE COYAGO</h4>
+                  <p>Telefono: 0993567171</p>
+                  <p>Email: epcoyago@espe.edu.ec</p>
+                </div></center>
+            
+                <div class="container" style="text-align: center; color: white;">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Grupo 8</span></strong>. All Rights Reserved
+                    </div>
+                     <div class="credits">
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+        </div>
+    
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
